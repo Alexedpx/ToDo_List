@@ -1,111 +1,122 @@
 .Header-wrapper {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 5%;
 
-	h1 {
-		font-size: calc(var(--font-size-standard) * 2);
-	}
+  h1 {
+    font-size: calc(var(--font-size-standard) * 2);
+  }
 }
 
-.container-wrapper {
-	padding: 20px;
-	background-color: rgba(21, 21, 19, 0.86);
-	border-radius: 20px;
-	width: 600px;
-	height: 400px;
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
 
-	h2 {
-		text-align: center;
-		font-size: calc(var(--font-size-standard) * 1.5);
-	}
+  margin-left: 35%;
+  margin-top: 10%;
 
-	.form-wrapper {
-		margin-top: 30px;
-		display: flex;
+  .Form-wrapper {
+    padding: 20px;
+    background-color: rgb(44, 44, 43);
+    border-radius: 20px;
+    width: 600px;
+    height: 400px;
 
-		justify-content: space-around;
-		align-items: center;
+    h2 {
+      text-align: center;
+      font-size: calc(var(--font-size-standard) * 1.5);
+    }
 
-		.input {
-			border-style: none;
-			border: 3px solid #1a1919;
-			height: 50px;
-			width: 300px;
-			background-color: var(--background-color-text);
-			border-radius: 5px;
-			font-size: calc(var(--font-size-standard) * 1);
-			padding-left: 30px;
-			color: var(--primary-color);
-		}
+    .form-wrapper {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-		.button {
-			background-color: var(--background-color-text);
-			font-size: calc(var(--font-size-standard) * 1.2);
-			color: var(--primary-color);
-			border-style: none;
-			border: 3px solid #1a1919;
-			border-radius: 5px;
-			width: 40px;
-			height: 40px;
-			cursor: pointer;
-		}
-	}
+      .input {
+        border-style: none;
+        border: 3px solid #1a1919;
+        height: 50px;
+        width: 300px;
+        background-color: var(--background-color-text);
+        border-radius: 5px;
+        font-size: calc(var(--font-size-standard) * 1);
+        padding-left: 30px;
+        color: var(--primary-color);
+      }
 
-	.checkbox {
-		display: flex;
-		align-items: center;
-		position: relative;
+      .button {
+        background-color: var(--background-color-text);
+        font-size: calc(var(--font-size-standard) * 1.2);
+        color: var(--primary-color);
+        border-style: none;
+        border: 3px solid #1a1919;
+        border-radius: 5px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
 
-		background-color: var(--background-color-text);
-		border-radius: 5px;
-		width: 30px;
-		height: 30px;
-		color: var(--primary-color);
-		border: 3px solid #1a1919;
-	}
+    .checkbox {
+      display: flex;
+      align-items: center;
+      position: relative;
 
-	.checkbox > input {
-		cursor: pointer;
-		position: absolute;
-		opacity: 0;
-		inset: 0;
-	}
+      background-color: var(--background-color-text);
+      border-radius: 5px;
+      width: 30px;
+      height: 30px;
+      color: var(--primary-color);
+      border: 3px solid #1a1919;
+    }
 
-	.checkbox:focus-within {
-		border-color: var(--primary-color);
-	}
+    .checkbox > input {
+      cursor: pointer;
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+    }
 
-	.svg-icon {
-		margin: 2px;
-		fill: rgb(255, 255, 255);
-	}
+    .checkbox:focus-within {
+      border-color: var(--primary-color);
+    }
 
-	.Todo-wrapper {
-		display: flex;
-		align-items: center;
+    .svg-icon {
+      margin: 2px;
+      fill: rgb(255, 255, 255);
+    }
 
-		width: 80%;
-		margin-left: 10%;
-		margin-top: 5%;
+    .Todo-wrapper {
+      display: flex;
+      align-items: center;
 
-		.todo-text {
-			width: 86%;
-			padding-left: 5%;
-			font-size: calc(var(--font-size-standard) * 1);
-		}
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 5%;
 
-		.todo-delete {
-			border-radius: 5px;
-			border: none;
-			background: none;
-			cursor: pointer;
-			width: 35px;
-			height: 35px;
-		}
+      .todo-text {
+        width: 86%;
+        padding-left: 5%;
+        font-size: calc(var(--font-size-standard) * 1);
+      }
 
-		.svg-trash {
-			fill: var(--primary-color);
-		}
-	}
+      .todo-delete {
+        border-radius: 5px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+      }
+
+      .svg-trash {
+        fill: var(--primary-color);
+      }
+    }
+  }
 }

@@ -4,7 +4,7 @@
 	/* Colors */
 	--primary-color: #ffffff;
 	--secondary-color: #000000;
-    --background-color: #95D7AE;
+    --background-color: rgba(241, 196, 113, 0.959);
 	--background-color-text: rgba(26, 26, 23, 0.582);
 
 	/* font-family */
@@ -44,7 +44,6 @@ body {
 	overflow-x: hidden;
 	width: 100vw;
 	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	
+
 }
