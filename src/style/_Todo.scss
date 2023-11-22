@@ -1,28 +1,111 @@
-.Todo-wrapper {
+.Header-wrapper {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 70px;
+
+	h1 {
+		font-size: calc(var(--font-size-standard) * 2);
+	}
+}
+
+.container-wrapper {
 	padding: 20px;
 	background-color: rgba(21, 21, 19, 0.86);
 	border-radius: 20px;
 	width: 600px;
 	height: 400px;
 
-	h1 {
+	h2 {
 		text-align: center;
+		font-size: calc(var(--font-size-standard) * 1.5);
 	}
 
-	.add-wrapper {
-   
+	.form-wrapper {
+		margin-top: 30px;
 		display: flex;
-		justify-content: center;
-		width: 180px;
-        height: 50px;
-		
-		
+
+		justify-content: space-around;
+		align-items: center;
 
 		.input {
-           
-            background-color: rgba(21, 21, 19, 0.86);
-            
-            border: 2px solid #5E5E5E;
-        }
+			border-style: none;
+			border: 3px solid #1a1919;
+			height: 50px;
+			width: 300px;
+			background-color: var(--background-color-text);
+			border-radius: 5px;
+			font-size: calc(var(--font-size-standard) * 1);
+			padding-left: 30px;
+			color: var(--primary-color);
+		}
+
+		.button {
+			background-color: var(--background-color-text);
+			font-size: calc(var(--font-size-standard) * 1.2);
+			color: var(--primary-color);
+			border-style: none;
+			border: 3px solid #1a1919;
+			border-radius: 5px;
+			width: 40px;
+			height: 40px;
+			cursor: pointer;
+		}
+	}
+
+	.checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		background-color: var(--background-color-text);
+		border-radius: 5px;
+		width: 30px;
+		height: 30px;
+		color: var(--primary-color);
+		border: 3px solid #1a1919;
+	}
+
+	.checkbox > input {
+		cursor: pointer;
+		position: absolute;
+		opacity: 0;
+		inset: 0;
+	}
+
+	.checkbox:focus-within {
+		border-color: var(--primary-color);
+	}
+
+	.svg-icon {
+		margin: 2px;
+		fill: rgb(255, 255, 255);
+	}
+
+	.Todo-wrapper {
+		display: flex;
+		align-items: center;
+
+		width: 80%;
+		margin-left: 10%;
+		margin-top: 5%;
+
+		.todo-text {
+			width: 86%;
+			padding-left: 5%;
+			font-size: calc(var(--font-size-standard) * 1);
+		}
+
+		.todo-delete {
+			border-radius: 5px;
+			border: none;
+			background: none;
+			cursor: pointer;
+			width: 35px;
+			height: 35px;
+		}
+
+		.svg-trash {
+			fill: var(--primary-color);
+		}
 	}
 }
