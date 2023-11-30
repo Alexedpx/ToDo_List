@@ -1,0 +1,62 @@
+.Menu-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 1%;
+	margin-left: 1%;
+	background-color: var(--background-color-text);
+	border-radius: 10px;
+	width: 280px;
+	height: 95vh;
+
+	.first-container {
+		padding: 40px;
+	}
+
+	.second-container,
+	.third-container {
+		height: 40%;
+		padding: 30px;
+
+		h2 {
+			padding-top: 5%;
+			padding-bottom: 10%;
+		}
+
+		.journée {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			
+		}
+		.taches {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		
+		}
+		.todo-important,
+		.todo-journée {
+			cursor: pointer;
+			border: none;
+			background: none;
+			color: var(--primary-color);
+		}
+
+		.todo-important.important {
+			color: #ffcc00;
+		}
+	}
+
+	.taches-menu,
+	.list-menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 70%;
+		height: 40%;
+
+		p {
+			font-size: 18px;
+		}
+	}
+}

@@ -4,12 +4,11 @@
 	/* Colors */
 	--primary-color: #ffffff;
 	--secondary-color: #000000;
-    --background-color: rgba(241, 196, 113, 0.959);
-	--background-color-text: rgba(26, 26, 23, 0.582);
+	--background-color: rgba(241, 196, 113, 0.959);
+	--background-color-text: rgb(44, 44, 43);
 
 	/* font-family */
 	--font: "Montserrat", sans-serif;
-
 
 	/* font-weight */
 
@@ -32,18 +31,46 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-
-	
 }
 
 body {
 	color: var(--primary-color);
 	font-family: var(--font);
-    background-color: var(--background-color);
 	overflow-y: hidden;
 	overflow-x: hidden;
 	width: 100vw;
 	height: 100vh;
-	
+}
+.bg {
+	animation: slide 6s ease-in-out infinite alternate;
+	background-image: linear-gradient(
+		-60deg,
+		rgb(204, 252, 203) 50%,
+		rgb(150, 230, 179) 50%
+	);
+	bottom: 0;
+	left: -50%;
+	opacity: 0.5;
+	position: fixed;
+	right: -50%;
+	top: 0;
+	z-index: -1;
+}
 
+.bg2 {
+	animation-direction: alternate-reverse;
+	animation-duration: 10s;
+}
+
+.bg3 {
+	animation-duration: 10s;
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(-25%);
+	}
+	100% {
+		transform: translateX(25%);
+	}
 }
