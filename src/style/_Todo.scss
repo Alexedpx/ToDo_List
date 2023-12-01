@@ -27,12 +27,39 @@
 		background-color: rgb(44, 44, 43);
 		border-radius: 20px;
 		width: 500px;
-		height: 580px;
 
-		h2 {
-			text-align: center;
-			padding-top: 2px;
-			font-size: calc(var(--font-size-standard) * 1.5);
+		.doing-done {
+			display: flex;
+			margin: 10px;
+			justify-content: space-between;
+
+			.button-todo {
+				cursor: pointer;
+				border-radius: 3px;
+				margin-left: 135px;
+				border: none;
+				height: 40px;
+				width: 80px;
+				background-color: var(--background-color);
+				color: var(--primary-color);
+
+				p {
+					font-size: calc(var(--font-size-standard) * 0.8);
+				}
+			}
+			.button-done {
+				cursor: pointer;
+				border-radius: 3px;
+				margin-right: 135px;
+				border: none;
+				height: 40px;
+				width: 80px;
+				background-color: var(--background-color);
+				color: var(--primary-color);
+				p {
+					font-size: calc(var(--font-size-standard) * 0.8);
+				}
+			}
 		}
 
 		.form-wrapper {
@@ -72,7 +99,7 @@
 
 		.completed {
 			text-decoration: line-through;
-			opacity: 0.5; /* Opacity pour indiquer que la tâche est complétée */
+			opacity: 0.7; /* Opacity pour indiquer que la tâche est complétée */
 		}
 
 		.checkbox > input {
@@ -88,13 +115,13 @@
 
 		.svg-icon {
 			margin: 2px;
-			fill: rgb(255, 255, 255);
+			fill: var(--primary-color);
 		}
 
 		.Todo-wrapper {
 			position: relative;
 			height: 50px;
-			background-color: #6a66a3;
+			background-color: var(--background-color);
 			padding: 2%;
 			border-radius: 5px;
 			display: flex;
@@ -155,7 +182,7 @@
 		}
 
 		.todo-important.important {
-			color: #ffcc00; 
+			color: #ffcc00;
 			fill: #ffcc00;
 		}
 

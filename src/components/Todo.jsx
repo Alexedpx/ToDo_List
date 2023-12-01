@@ -46,7 +46,14 @@ export default function TodoList() {
 				</div>
 
 				<div className="Form-wrapper">
-					<h2>TO DO</h2>
+					<div className="doing-done">
+						<button type="button" className="button-todo">
+							<p>To Do</p>
+						</button>
+						<button type="button" className="button-done">
+							<p>Terminé</p>
+						</button>
+					</div>
 
 					<Form addTodo={addTodo} />
 
@@ -62,15 +69,6 @@ export default function TodoList() {
 							/>
 						))}
 					</div>
-
-					{/* <div className="Choosebutton">
-						<button type="button" className="calendar">
-							Add to 📅
-						</button>
-						<button type="button" className="list">
-							Add to a List
-						</button>
-					</div> */}
 				</div>
 			</div>
 		</>
@@ -133,6 +131,15 @@ const Todo = ({ text, completed, onEdit, onToggle, onDelete }) => {
 		setIsImportant(!isImportant);
 	};
 
+	// const handleKeyDown = (event) => {
+	// 	if (
+	// 		event.key === "Enter" &&
+	// 		event.currentTarget.elements.todo.value.trim() !== ""
+	// 	) {
+	// 		event.preventDefault();
+	// 		onSubmit(event);
+	// 	}
+	// };
 	return (
 		<div className={`Todo-wrapper ${completed ? "completed" : ""}`}>
 			<Checkbox checked={completed} onChange={onToggle} />
@@ -157,6 +164,7 @@ const Todo = ({ text, completed, onEdit, onToggle, onDelete }) => {
 						type="text"
 						value={editedText}
 						onChange={(e) => setEditedText(e.target.value)}
+						// onKeyDown={handleKeyDown}
 					/>
 					<button onClick={handleSave} className="save">
 						<CiSaveUp2 size={25} />

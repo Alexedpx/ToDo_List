@@ -23,16 +23,12 @@ export default function Menu() {
 					<h2>Tâches</h2>
 
 					<div className="taches-menu">
-            <div className="journée">
-            <button
-								className="todo-journée"
-								onClick={handleToggleImportant}
-							>
-							<FiSun size={25} /> 
-              </button>
-             <p>Ma journée</p> 
-						
-            </div>
+						<div className="journée">
+							<button className="todo-journée">
+								<FiSun size={25} />
+							</button>
+							<p>Ma journée</p>
+						</div>
 						<div className="taches">
 							<button
 								className={`todo-important ${isImportant ? "important" : ""}`}
@@ -48,13 +44,18 @@ export default function Menu() {
 				<div className="third-container">
 					<h2>Listes</h2>
 					<div className="list-menu">
-						<p>
-							<PiLockKeyFill size={25} /> Personnel
-						</p>
-
-						<p>
-							<MdWork size={25} /> Travail
-						</p>
+						<div className="personnel">
+							<button className="todo-personnel">
+								<PiLockKeyFill size={25} />
+							</button>
+							<p>Personnel</p>
+						</div>
+						<div className="travail">
+							<button className="todo-travail">
+								<MdWork size={25} />
+							</button>
+							<p>Travail</p>
+						</div>
 					</div>
 				</div>
 			</div>

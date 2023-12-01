@@ -23,16 +23,17 @@
 		}
 
 		.journée {
+			
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 			align-items: center;
 			
 		}
 		.taches {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
 			align-items: center;
-		
+			
 		}
 		.todo-important,
 		.todo-journée {
@@ -58,5 +59,25 @@
 		p {
 			font-size: 18px;
 		}
+	}
+	.todo-personnel,
+	.todo-travail {
+		cursor: pointer;
+		border: none;
+		background: none;
+		color: var(--primary-color);
+	}
+	.personnel {
+		
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.travail {
+		
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		margin-right: 30px;
 	}
 }
