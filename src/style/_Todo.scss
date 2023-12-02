@@ -1,223 +1,205 @@
 .container-form {
-	position: absolute;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-left: 15vw;
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  margin-left: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-	width: 80vw;
+  width: 80vw;
 
-	.Header-wrapper {
-		margin-bottom: 50px;
-		margin-top: 5%;
-		display: flex;
-		margin-left: 5%;
+  .Header-wrapper {
+    justify-content: center;
+    padding: 2px;
+    display: flex;
 
-		h1 {
-			font-size: calc(var(--font-size-standard) * 2);
-		}
-	}
+    h1 {
+      font-size: calc(var(--font-size-standard) * 1.5);
+    }
+  }
 
-	.Form-wrapper {
-		margin-bottom: 5vw;
-		margin-right: 30%;
-		padding: 20px;
-		background-color: rgb(44, 44, 43);
-		border-radius: 20px;
-		width: 500px;
+  .Form-wrapper {
+    margin-bottom: 5vw;
+    margin-right: 30%;
+    padding: 20px;
+    background-color: rgb(44, 44, 43);
+    border-radius: 10px;
+    width: 500px;
 
-		.doing-done {
-			display: flex;
-			margin: 10px;
-			justify-content: space-between;
+    .doing-done {
+      display: flex;
+      margin: 10px;
+      justify-content: space-between;
 
-			.button-todo {
-				cursor: pointer;
-				border-radius: 3px;
-				margin-left: 135px;
-				border: none;
-				height: 40px;
-				width: 80px;
-				background-color: var(--background-color);
-				color: var(--primary-color);
+      .button-todo {
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 3px;
+        margin-left: 135px;
+        border: none;
+        height: 35px;
+        width: 80px;
+        background-color: var(--background-color);
+        color: var(--primary-color);
 
-				p {
-					font-size: calc(var(--font-size-standard) * 0.8);
-				}
-			}
-			.button-done {
-				cursor: pointer;
-				border-radius: 3px;
-				margin-right: 135px;
-				border: none;
-				height: 40px;
-				width: 80px;
-				background-color: var(--background-color);
-				color: var(--primary-color);
-				p {
-					font-size: calc(var(--font-size-standard) * 0.8);
-				}
-			}
-		}
+        p {
+          font-size: calc(var(--font-size-standard) * 0.8);
+        }
+      }
+      .button-done {
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 3px;
+        margin-right: 135px;
+        border: none;
+        height: 35px;
+        width: 80px;
+        background-color: var(--background-color);
+        color: var(--primary-color);
+        p {
+          font-size: calc(var(--font-size-standard) * 0.8);
+        }
+      }
+    }
 
-		.form-wrapper {
-			margin-top: 15px;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
+    .form-wrapper {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
 
-			.input {
-				border-style: none;
-				border: 3px solid #1a1919;
-				height: 50px;
-				width: 400px;
-				background-color: var(--background-color-text);
-				border-radius: 5px;
-				font-size: calc(var(--font-size-standard) * 1);
-				padding-left: 15px;
-				color: var(--primary-color);
+      .input {
+        border-style: none;
+        border: 3px solid #1a1919;
+        height: 50px;
+        width: 400px;
+        background-color: var(--background-color-text);
+        border-radius: 5px;
+        font-size: calc(var(--font-size-standard) * 1);
+        padding-left: 15px;
+        color: var(--primary-color);
 
-				&:focus {
-					background-color: var(--background-color-text);
-				}
-			}
-		}
+        &:focus {
+          background-color: var(--background-color-text);
+        }
+      }
+    }
 
-		.checkbox {
-			display: flex;
-			align-items: center;
-			position: relative;
-			background-color: var(--background-color-text);
-			border-radius: 5px;
-			width: 32px;
-			height: 30px;
-			color: var(--primary-color);
-			border: 3px solid #1a1919;
-		}
+    .checkbox {
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: var(--background-color-text);
+      border-radius: 5px;
+      width: 32px;
+      height: 30px;
+      color: var(--primary-color);
+      border: 3px solid #1a1919;
+    }
 
-		.completed {
-			text-decoration: line-through;
-			opacity: 0.7; /* Opacity pour indiquer que la tâche est complétée */
-		}
+    .completed {
+      text-decoration: line-through;
+      opacity: 0.7; /* Opacity pour indiquer que la tâche est complétée */
+    }
 
-		.checkbox > input {
-			cursor: pointer;
-			position: absolute;
-			opacity: 0;
-			inset: 0;
-		}
+    .checkbox > input {
+      cursor: pointer;
+      position: absolute;
+      opacity: 0;
+      inset: 0;
+    }
 
-		&:focus-within {
-			border-color: var(--primary-color);
-		}
+    &:focus-within {
+      border-color: var(--primary-color);
+    }
 
-		.svg-icon {
-			margin: 2px;
-			fill: var(--primary-color);
-		}
+    .svg-icon {
+      margin: 2px;
+      fill: var(--primary-color);
+    }
 
-		.Todo-wrapper {
-			position: relative;
-			height: 50px;
-			background-color: var(--background-color);
-			padding: 2%;
-			border-radius: 5px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: 94%;
-			margin-left: 10px;
-			margin-top: 15px;
+    .Todo-wrapper {
+      position: relative;
+      height: 50px;
+      background-color: var(--background-color);
+      padding: 2%;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 94%;
+      margin-left: 10px;
+      margin-top: 15px;
 
-			.todo-text {
-				width: 80%;
-				padding-left: 5%;
-				font-size: calc(var(--font-size-standard) * 1);
-			}
+      .todo-text {
+        width: 80%;
+        padding-left: 5%;
+        font-size: calc(var(--font-size-standard) * 1);
+      }
 
-			.todo-delete {
-				border-radius: 5px;
-				border: none;
-				background: none;
-				cursor: pointer;
-				width: 35px;
-				height: 35px;
-			}
+      .todo-delete {
+        border-radius: 5px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+      }
 
-			.svg-trash {
-				fill: var(--primary-color);
-			}
+      .svg-trash {
+        fill: var(--primary-color);
+      }
 
-			.save,
-			.cancel {
-				margin-left: 10px;
-				border: none;
-				border: none;
-				background: none;
-				cursor: pointer;
-				color: var(--primary-color);
-			}
-		}
+      .cancel {
+        margin-right: 10px;
+        padding-top: 5px;
+        border: none;
 
-		.recap-wrapper {
-			margin-left: 30vw;
-			margin-top: -10vw;
-			padding: 20px;
-			background-color: rgb(44, 44, 43);
-			border-radius: 20px;
-			width: 400px;
-			height: 500px;
-		}
+        background: none;
+        cursor: pointer;
+        color: var(--primary-color);
+      }
+    }
 
-		.todo-edit,
-		.todo-important {
-			margin-top: 1%;
-			margin-right: 2%;
-			cursor: pointer;
-			border: none;
-			background: none;
-			color: var(--primary-color);
-		}
+    .recap-wrapper {
+      margin-left: 30vw;
+      margin-top: -10vw;
+      padding: 20px;
+      background-color: rgb(44, 44, 43);
+      border-radius: 20px;
+      width: 400px;
+      height: 500px;
+    }
 
-		.todo-important.important {
-			color: #ffcc00;
-			fill: #ffcc00;
-		}
+    .todo-edit,
+    .todo-important {
+      margin-top: 1%;
+      margin-right: 2%;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--primary-color);
+    }
 
-		.Choosebutton {
-			position: fixed;
-			top: 0; /* Adjust the top value as needed */
-			right: 0; /* Adjust the right value as needed */
-			display: flex;
-			justify-content: space-around;
+    .todo-important.important {
+      color: #ffcc00;
+      fill: #ffcc00;
+    }
 
-			.calendar,
-			.list {
-				cursor: pointer;
-				background-color: #564787;
-				border: none;
-				padding: 2%;
-				color: var(--primary-color);
-				font-size: calc(var(--font-size-standard) * 0.8);
-				font-weight: bold;
-				border-radius: 5px;
-			}
-		}
+    .input-edit {
+      border-style: none;
+      border: 1px solid #ffffff;
+      height: 40px;
+      width: 290px;
+      background: none;
 
-		.input-edit {
-			border-style: none;
-			border: 1px solid #ffffff;
-			height: 40px;
-			width: 290px;
-			background: none;
+      border-radius: 5px;
+      font-size: calc(var(--font-size-standard) * 1);
+      padding-left: 15px;
 
-			border-radius: 5px;
-			font-size: calc(var(--font-size-standard) * 1);
-			padding-left: 15px;
-
-			color: var(--primary-color);
-		}
-	}
+      color: var(--primary-color);
+    }
+  }
 }
